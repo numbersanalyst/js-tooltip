@@ -1,5 +1,7 @@
 # js-tooltip
 
+Simple and advance tooltips exercise for junior front developer.
+
 ![page](page.png)
 *Photo of the page*
 
