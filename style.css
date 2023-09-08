@@ -28,6 +28,7 @@ body {
 }
 
 .boxes div {
+  position: relative;
   width: 200px;
   height: 200px;
   border-radius: 25px;
@@ -37,6 +38,43 @@ body {
 
 .boxes div:hover {
   transform: scale(105%);
+}
+
+.tooltip {
+  position: absolute;
+  min-width: 180px;
+  padding: 30px 20px;
+  color: white;
+  background-color: rgb(73, 84, 231);
+  border-radius: 15px;
+}
+
+.tooltip.top {
+  transform: translateY(-140%);
+}
+
+.tooltip.bottom {
+  bottom: 0;
+  transform: translateY(130%);
+}
+
+.tooltip::after {
+  position: absolute;
+  background-color: inherit;
+  transform: rotate(45deg);
+  content: '';
+  width: 24px;
+  height: 24px;
+}
+
+.tooltip.top::after {
+  left: 18px;
+  bottom: -6px;
+}
+
+.tooltip.bottom::after {
+  right: 18px;
+  top: -6px;
 }
 
 .red {
