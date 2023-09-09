@@ -8,7 +8,7 @@ const createTooltip = (e) => {
         const tooltipParent = e.target;
         const tooltipText = e.target.dataset.tooltip;
         const tooltipPosition = e.target.dataset.tooltipPosition;
-        const tooltipState = e.target.dataset.tooltipState;
+        const tooltipStatic = e.target.dataset.tooltipStatic;
 
         const newTooltip = document.createElement('span');
         newTooltip.innerHTML = tooltipText;
@@ -16,7 +16,7 @@ const createTooltip = (e) => {
 
         tooltipParent.appendChild(newTooltip);
 
-        if (tooltipState) {
+        if (tooltipStatic) {
             const closeBtn = document.createElement('button');
             closeBtn.innerHTML = 'x';
             closeBtn.className = 'close-btn';
@@ -30,8 +30,8 @@ const createTooltip = (e) => {
 
 const removeTooltip = (e) => {
     const tooltip = e.target.querySelector('.tooltip');
-    const tooltipState = e.target.dataset.tooltipState;
-    if (!tooltipState && tooltip) { tooltip.remove(); }
+    const tooltipStatic = e.target.dataset.tooltipStatic;
+    if (!tooltipStatic && tooltip) { tooltip.remove(); }
 };
 
 const removeTooltipByBtn = (e) => {
