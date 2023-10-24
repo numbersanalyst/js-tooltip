@@ -1,4 +1,4 @@
-# js-tooltips
+# JS tooltips
 
 A simple and advanced tooltip exercise for junior front-end developers. These tooltips are written in JavaScript, but also use HTML and CSS.
 
